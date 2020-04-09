@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var name = "zhusisi";
+    function a() {
+        var name = "lujieni";
+        b();
+        /*
+            函数归属谁，跟她在哪调用没有关系，而是在哪定义有关。因此b函数的父级作用域是a函数
+         */
+        function b() {
+            alert(name);
+        }
+    }
+    a();
+    b();//报错,因为b函数属于a函数,所以window无权调用
+</script>
+</html>
