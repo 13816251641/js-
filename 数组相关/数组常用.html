@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+       即使数组越界了,但array[0]打印的值是:undefined,程序仍旧会执行
+    */
+    var array=[];
+    alert(array[0]);
+    /*
+        因为array[0]是undefined,利用||语法会被替换为""
+     */
+    var value= array[0] || "";
+    alert(value);
+
+
+</script>
+</html>
