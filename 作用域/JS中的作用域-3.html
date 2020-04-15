@@ -6,8 +6,13 @@
 
 <script>
 
+/*
+    if是通透的,function不要写在if里面
+ */
+
+
 // alert(a);			// ...
-alert( fn1 );		// FF 不能对下面的函数进行预解析
+alert( fn1 );		    // FF 不能对下面的函数进行预解析
 
 var a = 1;
 function fn1(){
@@ -15,7 +20,7 @@ function fn1(){
 }
 
 if( true ){
-	
+
 }
 
 
