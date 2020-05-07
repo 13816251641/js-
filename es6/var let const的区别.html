@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+        let不存在变量提升
+     */
+    console.log(b); //undefined
+    var b = 10;
+
+    /*
+        let声明的变量，存在块级作用域
+     */
+    {
+        var a = 10;
+        let b = 20;
+    }
+    console.log(a); //10
+    console.log(b); // ReferenceError: b is not defined
+
+
+    /*
+        这个案例好:var申明的变量不存在块级作用域
+     */
+    var a =[];
+    for( var i=0; i<10; i++ ){
+        a[i] = function(){
+            console.log(i);
+        }
+    }
+
+    for( var j = 0; j<a.length; j++ ){
+        a[j](); //输出10个10。 因为i是var声明的，在全局范围内都用，每次新的i都会覆盖原来的。
+    }
+
+    /*
+        let申明的变量存在块级作用域:块级作用域由{ }包括，if语句和for语句里面的{ }也属于块作用域
+     */
+    var a =[];
+    for( let i=0; i<10; i++ ){
+        a[i] = function(){
+            console.log(i);
+        }
+    }
+
+    for( let j = 0; j<a.length; j++ ){
+        a[j](); //输出 0，1，2，...，9
+    }
+
+
+    /*
+        let不允许在同一作用域内重复声明同一个变量
+     */
+    let a = 10;
+    let a = 15;
+
+    console.log(a);//Uncaught SyntaxError:
+
+    /*
+      暂时性死区：在代码块内，使用let声明变量之前，该变量都是不可以使用
+     */
+    let a =10;
+    function fn1(){
+        console.log(a);
+        let a = 5;
+    }
+
+    fn1();//Uncaught ReferenceError: a is not defined
+
+
+
+
+</script>
+</html>
