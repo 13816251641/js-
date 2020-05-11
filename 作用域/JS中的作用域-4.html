@@ -10,12 +10,16 @@ window.onload = function (){
 
 	for( var i=0; i<aBtn.length; i++ ){
 		aBtn[i].onclick = function (){
-
-			// alert( i );			// 3
-
-			for( var i=0; i<aBtn.length; i++ ){
-				aBtn[i].style.background = 'yellow';
-			}
+            /*
+              错误的做法
+            */
+            aBtn[i].style.background="yellow";//这里i=3
+			/*
+			    正确的做法
+			    for( var i=0; i<aBtn.length; i++ ){
+				    aBtn[i].style.background = 'yellow';
+			    }
+			*/
 		};
 	}
 };

@@ -11,9 +11,9 @@
 
 </body>
 <script type="text/javascript">
-    var name = "zhusisi";
+    let name = "zhusisi";
     function a() {
-        var name = "lujieni";
+        let name = "lujieni";
         b();
         /*
             函数归属谁，跟她在哪调用没有关系，而是在哪定义有关。因此b函数的父级作用域是a函数
@@ -23,6 +23,6 @@
         }
     }
     a();
-    b();//报错,因为b函数属于a函数,所以window无权调用
+    //b();//报错,因为b函数属于a函数,所以window无权调用
 </script>
 </html>

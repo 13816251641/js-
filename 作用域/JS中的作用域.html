@@ -83,7 +83,6 @@ fn1();
 alert(a);							// 1
 
 
-注意:这里的a只是一个数字类型的值,如果是对象情况就不同了
 var a = 1;
 function fn1(a){
 	alert(a);						// 1
@@ -91,6 +90,17 @@ function fn1(a){
 }
 fn1(a);
 alert(a);							// 1
+注意:这里的a只是一个数字类型的值,如果是对象情况就不同了,见下面示例
+
+var a = {age:23};
+function fn1(a){
+	console.log(a);		//{age:23}
+	a.age=29;
+}
+fn1(a);
+console.log(a);         //{age:29}
+
+
 */
 </script>
 
