@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   let array=['a','b','c','d','e'];
+   /*
+        1.遍历的函数是同步的
+        2.遍历中的return不能停止遍历
+    */
+   array.forEach((e,index)=>{
+      console.log("item:"+e+";index:"+index);
+      return;
+   });
+   console.log('over');
+
+</script>
+</html>

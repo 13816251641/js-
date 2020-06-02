@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   /*
+        对数组中的每个元素都执行一次指定的函数（callback）,直到此函数返回 false,后面的就不会执行!!!
+        只要有一个不满足条件,every将返回 false,如果回调函数对每个元素执行后都返回 true,every 将返回 true。
+
+        5 15满足小于20,但20不满足所以遍历到20就结束了!!!
+    */
+   let array=[5,15,20,25,30];
+   let result = array.every(e=>{
+        console.log(e);
+        return e<20;
+   });
+   console.log(result);
+
+</script>
+</html>
