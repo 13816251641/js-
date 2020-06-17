@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function create(name,age){
+        /*
+            前提是你要用 new Create()调度!!!
+            假想的系统内部工作流程
+            var this = new Object();
+         */
+
+        this.name = name;
+        this.age = age;
+        this.showName = function () {
+            alert("我的名字:"+this.name);
+        }
+        this.showAge = function () {
+            alert("我的年龄:"+this.age)
+        }
+
+        /*
+            假想的系统内部工作流程
+            return this;
+         */
+    }
+    let o1 = new create("陆哥哥",29);
+    o1.showName();
+</script>
+</html>

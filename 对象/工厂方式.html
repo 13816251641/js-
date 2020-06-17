@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function create(name,age){
+        let obj = new Object();
+        obj.name = name;
+        obj.age = age;
+        obj.showName = function () {
+            alert("我的名字:"+this.name);
+        }
+        obj.showAge = function () {
+            alert("我的年龄:"+this.age)
+        }
+        return obj;
+    }
+    let o1 = create("陆哥哥",29);
+    o1.showName();
+</script>
+</html>

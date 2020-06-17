@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    /*
+        构造函数就是类,类就是构造函数
+     */
+
+    function People(name,age){
+        /*
+            前提是你要用 new Create()调度!!!
+            假想的系统内部工作流程
+            var this = new Object();
+         */
+
+        this.name = name;
+        this.age = age;
+
+        /*
+            假想的系统内部工作流程
+            return this;
+         */
+    }
+    People.prototype.showName = function () {
+        alert("我的名字:"+this.name);
+    }
+
+    People.prototype.showAge = function (){
+        alert("我的年龄:"+this.age)
+    }
+
+    let o1 = new People("陆哥哥",29);
+    let o2 = new People("王浩",25);
+    o2.showName();
+    alert(o1.showAge === o2.showAge);
+</script>
+</html>

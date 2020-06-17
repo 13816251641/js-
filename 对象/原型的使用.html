@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+   /* 给String的原型加了show方法  */
+   String.prototype.show = function () {
+       alert(this.length);
+   }
+   let a = '1234567';
+   let b = '321';
+   alert(a.show == b.show);
+</script>
+</html>
