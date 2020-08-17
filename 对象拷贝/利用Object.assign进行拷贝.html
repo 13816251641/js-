@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = {
+            name:'张三',
+            hobby:['a','b','c'],
+            age: 27
+        };
+        let b = Object.assign({},a);
+        b.name = '李四';
+        b.hobby = 'hobby';
+        b.age = 50;
+        console.log(a);
+        console.log(b);
+        /*
+            综上:这样没问题,前提是:name和hobby都是原始对象,即字符串,数字,数组,如果是对象的引用会有问题!!!
+         */
+
+    </script>
+</body>
+</html>
