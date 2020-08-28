@@ -8,13 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
 
 
+        console.log(new Date().getTime());//getTime()是毫秒,除以1000是秒
+
+    </script>
 </body>
-<script>
-    let regualr = /^[0-9a-zA-Z]+$/;//+表示匹配前面的子表达式至少一次或多次,regular不能加''
-    console.log(regualr.test('a@123'));//false
-    console.log(regualr.test(''));//false 因为+至少要匹配一次
-
-</script>
 </html>

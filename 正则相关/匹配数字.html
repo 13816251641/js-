@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    //let regualr = /^[1-9]+$/; //+表示匹配前面的子表达式至少一次或多次,regular不能加''
+
+    /* 匹配123 or 123,456,789  */
+    let regualr = /^[0-9]+(,[0-9]+)*$/;
+
+    console.log(regualr.test(''));//false
+    console.log(regualr.test('123'));//false
+    console.log(regualr.test('123,123'));//true
+    console.log(regualr.test('123,123,'));//false
+
+
+
+</script>
+</html>
