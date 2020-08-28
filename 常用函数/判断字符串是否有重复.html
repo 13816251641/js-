@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result = '不重复';
+        let content = '123,456,789,23,456';
+        let arrStr = content.split(',');
+        let hash = {};//亮点,使用对象的属性存在与否来判断是否重复
+        for(let i in arrStr){
+           if(!hash[arrStr[i]]){
+               hash[arrStr[i]] = true;
+           }else{
+               result = '重复';
+               break;
+           }
+        }
+        console.log(result);
+    </script>
+</body>
+</html>
