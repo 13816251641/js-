@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let text = '12,13,45,14,1';
+    let array = text.split(',');
+
+    array.sort(function (a,b) {
+        return a - b;
+    });
+
+    let result = '';
+    for (let i in array) {
+        result += array[i]+ ',';
+    }
+    console.log(result.substring(0,result.length-1));
+    console.log(result);
+
+</script>
+
+</html>
