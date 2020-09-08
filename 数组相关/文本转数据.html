@@ -8,9 +8,10 @@
 
 </body>
 <script>
-    let text = '12,13,45,14,1';
-    let array = text.split(',');
+    let text = '12,13,45,14,1';//文本
+    let array = text.split(',');//文本->数组
 
+    /* 排序 */
     array.sort(function (a,b) {
         return a - b;
     });
@@ -19,7 +20,7 @@
     for (let i in array) {
         result += array[i]+ ',';
     }
-    console.log(result.substring(0,result.length-1));
+    console.log(result.substring(0,result.length-1));//substring并不会该表result本身的值
     console.log(result);
 
 </script>
