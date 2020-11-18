@@ -9,8 +9,16 @@
 </head>
 <body>
     <script>
-
         console.log(new Date().getTime());//getTime()是毫秒,除以1000是秒
+
+        //alert(getDaysBetween(new Date('2020-11-04 00:00:00'),'2020-11-19'));
+        alert(getDaysBetween('2020-11-19'));
+        function getDaysBetween(end){
+            let startDate = new Date('2020-11-03').setHours(0,0,0,0);
+            let endDate = Date.parse(end);
+            let days=parseInt((endDate - startDate)/(1*24*60*60*1000));
+            return days;
+        }
 
     </script>
 </body>

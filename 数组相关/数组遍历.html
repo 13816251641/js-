@@ -8,16 +8,23 @@
 
 </body>
 <script>
-   let array=['a','b','c','d','e'];
+   let array = [{a:1},{'b':2},{'c':3},{'d':4},{'e':5}];
    /*
         1.遍历的函数是同步的
-        2.遍历中的return不能停止遍历
-    */
+        2.遍历中的return不能停止遍历,但相当于continue
+        3.index从0开始
+   */
    array.forEach((e,index)=>{
-      console.log("item:"+e+";index:"+index);
-      return;
+       console.log("item:"+e+";index:"+index);
+       e.name = 'name';
+       return;
    });
-   console.log('over');
+   console.log(array);
+
+
+
+
+
 
 </script>
 </html>
