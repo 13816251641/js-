@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*
+        加入了g之后，我可以通过某种方式得到所有的匹配，这里的“方式”对于exec而言，就是依次执行这个方法即可
+     */
+   /* let regx=/user\d/g;
+    let str='user18dsdfuser2dsfsd';
+    let rs= regx.exec(str);//此时rs的值为{user1}
+    console.log("rs:"+rs);
+    let rs2= regx.exec(str);//此时rs的值依然为{user2}
+    console.log("rs2:"+rs2);*/
+
+   /*
+      对于String对象的match方法，不加入g，也只是返回第一个匹配，一直执行match方法也总是返回第一个匹配，加入g，则一次返回所有的匹配（注意这与表达式对象的exec方法不同，
+      对于exec而言，表达式即使加上了g，也不会一次返回所有的匹配）。
+    */
+    var regx=/user\d/g;
+    var str='user1sdfsffuser2dfsdf';
+    var rs = str.match(regx);//此时rs的值为{user1}
+    console.log("rs:"+rs);
+    var rs2 = str.match(regx);//此时rs的值依然为{user1}
+    console.log("rs2:"+rs2);
+</script>
+
+</html>
