@@ -9,9 +9,9 @@
 </body>
 <script>
     const format = '{y}-{m}-{d} {h}:{i}:{s}';
-    let result = format.replace(/{(y|m|d|h|i|s)}/g,(p1, p2)=>{
-        console.log(p1);
-        console.log(p2);
+    let result = format.replace(/{(y|m|d|h|i|s)+}/g,(p1, p2)=>{
+        console.log(p1);//{y}
+        console.log(p2);//y
         return 'ok';
     });
     alert(result);
